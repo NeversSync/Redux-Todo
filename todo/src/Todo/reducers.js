@@ -1,16 +1,23 @@
-import * as actions from './actions';
+import * as actions from './constants';
 
-export function reducer(state, action) {
+export default function todos(state, action) {
   switch (action.type) {
   case actions.ADD_TODO:
     return {
-      ...state,
-      todo: action.payload
+      todos: [
+        ...state.todos,
+        {
+          name: action.payload,
+          completed: false
+        }
+      ]
     };
-  case actions.REMOVE_TODO:
+  case actions.REMOVE_TODO: //broke
     return {
-      ...state,
-      todo: action.payload
+      todos: {
+        name: action.payload,
+        completed: true
+      }
     };
   default:
     return state;

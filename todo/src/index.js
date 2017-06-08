@@ -5,11 +5,16 @@ import { createStore } from 'redux';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import reducers from './';
+import reducers from './Todo/reducers';
 
 const store = createStore(reducers,
   {
-    todo: []
+    todos: [
+      { name: 'eat', completed: false },
+      { name: 'shit', completed: false },
+      { name: 'sleep', completed: false },
+      { name: 'die', completed: true }
+    ]
   });
 
 ReactDOM.render(
