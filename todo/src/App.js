@@ -12,7 +12,6 @@ class App extends Component {
           <h2>Get it together</h2>
         </div>
         <TodoListContainer />
-
       </div>
     );
   }

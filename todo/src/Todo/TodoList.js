@@ -3,6 +3,10 @@ import TodoItemContainer from './TodoItemContainer';
 
 export default function TodoList(props) {
 
+  // function handleClick(item) {
+  //   this.setState({ })
+  // }
+
   const { addTodo, removeTodo, todos, dispatch } = props;
   let input;
 
